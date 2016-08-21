@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .container
+    h1.header API Basejump: Timestamp microservice
+    blockquote.w3-card-4
+      | User stories:
+      ul
+      | 1) I can pass a string as a parameter, and it will check to see whether that string
+      | contains either a unix timestamp or a natural language date (example: January 1, 2016)
+      ul
+      | 2) If it does, it returns both the Unix timestamp and the natural language form of that date.
+      ul
+      | 3) If it does not contain a date or Unix timestamp, it returns null for those properties.
+    div.w3-card-4
+      h3 Example usage:
+      br
+      code https://timestamp-ms.herokuapp.com/December%2015,%202015
+      br
+      code https://timestamp-ms.herokuapp.com/1450137600
+    div.w3-card-4
+      h3 Example output:
+      code
+      | {
+      | &quot;unix&quot;: 1450137600,
+      | &quot;natural&quot;: &quot;December 15, 2015&quot;
+      | }
+    h6 &copy; 2016 Anthony Trinh
